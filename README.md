@@ -4,7 +4,7 @@ alt-server-anisette-server is a simple program to streamline the management of t
 It does not need to be run as root however running it as root will not break things. It creates docker containers as the root user.
 
 ## BUILD/RUN:
-```rust
+```bash
 git clone https://github.com/max-amb/alt-server-anisette-server.git && cd alt-server-anisette-server
 cargo build # To just build a binary
 cargo run # To build then run it
