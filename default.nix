@@ -23,6 +23,10 @@ rustPlatform.buildRustPackage rec {
 
   nativeBuildInputs = [ rustfmt ];
 
+  buildInputs = [
+    docker
+  ]
+
   meta = with lib; {
     homepage = "https://github.com/max-amb/anisette-server";
     description = "alt-server-anisette-server is a simple program to streamline the management of the docker crate nyamisty/alt_anisette_server";
