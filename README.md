@@ -20,3 +20,10 @@ cargo run # To build and run
 git clone https://github.com/max-amb/alt-server-anisette-server.git && cd alt-server-anisette-server
 cargo build # To just build a binary
 ```
+
+## DOCKER🐳:
+This package requires a rootless docker install, there are man ways to achieve this on many distrobutions however I will link the main distros and their respective guides here:
+- [Arch](https://wiki.archlinux.org/title/Docker#Rootless_Docker_daemon)
+- [Fedora](https://developer.fedoraproject.org/tools/docker/docker-installation.html)
+- [Nixos](https://nixos.wiki/wiki/Docker#Rootless_docker)
+- [Ubuntu and Debian](https://linuxhandbook.com/rootless-docker/)
