@@ -11,22 +11,21 @@ use crate::{
 };
 mod stop; mod rm; mod start;
 
-const HELP_MESSAGE: &str = "\nUSAGE: alt-store-anisette-server <start/stop/rm/help> 
+const HELP_MESSAGE: &str = "\nUSAGE: anisette-server <start/stop/rm/help> 
     start -> starts (or creates it if its not already made) the anisette server container and checks if the environment variables are set correctly 
     stop -> kills/stops the anisette server container
     rm -> deletes the image and container from docker 
     help -> displays this help message
-
-    alt-store-anisette-server is a simple program to streamline the management of the docker crate nyamisty/alt_anisette_server which is currently required to run alt-server on your linux machine";
-
+";
 fn main() {
     let args: Vec<String> = env::args().collect();
-    if args.len() <= 1 { println!("Command was not provided: {}", HELP_MESSAGE); std::process::exit(127);}
-    else if args.len() > 2 { println!("Too many commands provided {}", HELP_MESSAGE); std::process::exit(127);}
+    if args.len() <= 1 { println!("anisette-server: Command was not provided, try 'anisette-server help' for more information"); std::process::exit(127);}
+    else if args.len() > 2 { println!("anisette-server: Too many commands provided, try 'anisette-server help' for more information"); std::process::exit(127);}
     else if args[1] == "help" { println!("{HELP_MESSAGE}"); std::process::exit(1);}
     else if args[1] == "start" { start(); }
     else if args[1] == "stop" { stop(); }
     else if args[1] == "rm" { rm(); }
+    else { println!("anisette-server: No valid command provided, try 'anisette-server help' for more information"); std::process::exit(127);}
 }
 
 fn already_made() -> bool{
