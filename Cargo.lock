@@ -3,7 +3,7 @@
 version = 3
 
 [[package]]
-name = "alt-server-anisette-server"
+name = "anisette-server"
 version = "0.1.0"
 dependencies = [
  "dockers",
