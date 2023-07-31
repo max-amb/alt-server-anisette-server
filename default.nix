@@ -9,7 +9,7 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "anisette-server";
-  version = "0.1";
+  version = "0.1.1";
 
   src = fetchurl {
     url = "https://github.com/max-amb/anisette-server/archive/refs/tags/v${version}.tar.gz";
