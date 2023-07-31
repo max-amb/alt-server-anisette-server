@@ -25,7 +25,7 @@ rustPlatform.buildRustPackage rec {
 
   buildInputs = [
     docker
-  ]
+  ];
 
   meta = with lib; {
     homepage = "https://github.com/max-amb/anisette-server";
